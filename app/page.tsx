@@ -3,7 +3,5 @@
 import BlogPost from './BlogPost';
 
 export default function Home() {
-  return (
-    <BlogPost />
-  );
+  return <BlogPost />;
 }
