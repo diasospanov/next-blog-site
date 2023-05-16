@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import styles from './page.module.scss';
 
 export default function BlogPost() {
   const [formIsOpen, setFormIsOpen] = useState(false);
@@ -13,7 +14,12 @@ export default function BlogPost() {
           <form>
             <input name="date" placeholder="DATE" />
             <input name="title" placeholder="TITLE" />
-            <input name="text" placeholder="TEXT" />
+            <br />
+            <textarea
+              name="text"
+              placeholder="TEXT"
+              className={styles.inputText}
+            />
             <button>Create</button>
           </form>
           <button onClick={() => setFormIsOpen(!formIsOpen)}>Cancel</button>
